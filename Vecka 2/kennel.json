@@ -1,1 +1,1 @@
-{"dogs": [{"name": "David", "race": "l", "age": 3, "weight": 4.0, "tailLength": 1.2}]}
+{"dogs": [{"name": "David", "race": "Cavalier", "age": 3, "weight": 20, "tailLength": 6.0}, {"name": "Happy", "race": "Cavalier", "age": 3, "weight": 15, "tailLength": 4.5}, {"name": "Morfar", "race": "Russel", "age": 50, "weight": 90.0, "tailLength": 450.0}]}

@@ -1,0 +1,13 @@
+{
+  "color-highlight.languages": ["/"],
+  "highlight.decorations": {
+    "rangeBehavior": 3
+  },
+  "highlight.regexes": {
+    "(//Todo)(:)": [
+      // A regex will be created from this string, don't forget to double escape it
+      { "color": "yellow" }, // Decoration options to apply to the first capturing group, in this case "//TODO"
+      { "color": "red" } // Decoration options to apply to the second capturing group, in this case ":"
+    ]
+  }
+}

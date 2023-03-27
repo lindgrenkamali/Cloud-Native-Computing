@@ -20,11 +20,11 @@ class Dog:
            return 3.7
 
         else:
-            return float(dog.age)*float(dog.weight)/10
+            return float(int(dog.age)*int(dog.weight)/10)
     
-    def __repr__(self):
+    def __str__(self):
         
-        return("Namn: %s, Ras: %s, Ålder(år): %d, Vikt(kg): %d, Svanslängd(dm): {0:f}", self.name, self.race, self.age, self.weight,  )
+        return("Namn: {}, Ras: {}, Ålder(år): {}, Vikt(kg): {}, Svanslängd(dm): {}".format(self.name, self.race, self.age, self.weight, self.tailLength))
 
    
 
@@ -41,7 +41,7 @@ class Kennel:
 
         newDog = Dog(name, race, age, weight)
         self.dogs.append(newDog)
-        print(Dog, "was added")
+        print("{} was added".format(newDog))
     
 
 
@@ -51,18 +51,24 @@ class Kennel:
         
         for d in self.dogs:
             if(d.tailLength >= number):
-                print(d.name)
+                print(d)
 
     def removeDog(self):
       name = input("Name of the dog to remove:")
-
+      found = False
       for d in self.dogs:
           if(d.name == name):
               self.dogs.remove(d)
-              print("%s was removed", name)
+              
+              found = True
               break
+          
 
-      print("No dog with name %s exists", name)       
+      if(found):
+            print("{} was removed".format(name))
+
+      else:          
+            print("No dog with name {} exists".format(name))       
 
 
 

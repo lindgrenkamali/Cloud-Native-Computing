@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="/static/static.css" />
+  </head>
+  <body>
+    <h1>{{.Rubrik}}</h1>
+    <h1>{{ .Title }}</h1>
+    <p>Bababoi</p>
+    <table>
+      <tr>
+        <thead>
+          <th>Id</th>
+          <th>Name</th>
+          <th>Age</th>
+          <th>City</th>
+          <th></th>
+        </thead>
+        <tbody>
+          {{range .Employees}}
+          <tr>
+            <td>{{.Id}}</td>
+            <td>{{.Name}}</td>
+            <td>{{.Age}}</td>
+            <td>{{.City}}</td>
+          </tr>
+          {{end}}
+        </tbody>
+      </tr>
+    </table>
+  </body>
+</html>
